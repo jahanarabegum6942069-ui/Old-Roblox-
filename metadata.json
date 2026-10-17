@@ -1,0 +1,6 @@
+{
+  "name": "BloxHub - Guest Play & Games",
+  "description": "Instant guest login game hub with Guest Boy and Guest Girl avatars in classic blue Roblox R shirts, Tilted Towers backdrop, Fortnite Battle Bus, and Animal Hospital games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

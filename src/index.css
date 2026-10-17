@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom 3D tactile button styles reminiscent of classic Roblox */
+.blox-btn-blue {
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+  border-bottom: 5px solid #075985;
+  transition: all 0.1s ease;
+}
+.blox-btn-blue:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+
+.blox-btn-green {
+  background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+  border-bottom: 5px solid #047857;
+  transition: all 0.1s ease;
+}
+.blox-btn-green:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+
+.blox-btn-red {
+  background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+  border-bottom: 5px solid #b91c1c;
+  transition: all 0.1s ease;
+}
+.blox-btn-red:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+@keyframes goldBreathingGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.5), 0 0 15px rgba(250, 204, 21, 0.3);
+    border-color: rgba(250, 204, 21, 0.9);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(234, 179, 8, 0.9), 0 0 30px rgba(250, 204, 21, 0.6);
+    border-color: rgba(254, 240, 138, 1);
+  }
+}
+
+.gold-glow-badge {
+  background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
+  color: #18181b;
+  font-weight: 900;
+  border: 1.5px solid #fde047;
+  animation: goldBreathingGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes redGlitch {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 transparent);
+    transform: translateX(0);
+  }
+  30%, 70% {
+    filter: drop-shadow(2px 0 0 #ef4444) drop-shadow(-2px 0 0 #000);
+    transform: translateX(1px);
+  }
+  50% {
+    filter: drop-shadow(-2px 0 0 #ef4444) drop-shadow(2px 0 0 #000);
+    transform: translateX(-1px);
+  }
+}
+
+.red-glitch {
+  animation: redGlitch 1.5s ease-in-out infinite;
+}
